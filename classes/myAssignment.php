@@ -20,24 +20,25 @@ trait MyAssignment {
       $even = $this->evenOddPrimeNumbers($evenRange);
       $prime = $this->evenOddPrimeNumbers($primeRange);
 
-      $count = (count($odd)) - 1;
+      /*$count = (count($odd)) - 1;
       if ($count%2==0){
         $median = ($count/2 ) + 1;
       }else{
         $median = (($count +1)/2);
       }
       return $odd[$median];
-
-        /*$count = count($prime);
-        if($count%2==0){
-          $median = ($count/2) - 1;
-          $answer = ($prime[$median]+($prime[$median]+2))/2;
-        }else{
-          $median = (($count + 1)/2)-1;
-          $answer = $prime[$median];
-        }
+               */
+       $count = count($odd);
+       if($count%2==1){
+        $median = (($count + 1)/2)-1;
+        $answer = $odd[$median];
         return $answer;
-        */
+       }else{
+        $median = $count/2;
+        $answer = ($odd[$median-1]+$odd[$median])/2;
+        return $answer;
+       }
+        
      // $count = count($odd) ;
       //$median = $count/2 + 1;
       //return $median;

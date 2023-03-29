@@ -12,7 +12,7 @@ require_once "classes/childAssignment.php";
 //creating an instance of of the class assigned 
 $class = new Assignment();
 
-$inherited= new childAssignment(['stop'=>10, 'start'=>0]);
+$inherited= new childAssignment(['stop'=>12, 'start'=>0]);
 //echo "The mean is ";
 echo ($inherited->calculateMean()['mean']);
 echo "<br>";
